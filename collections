@@ -1,0 +1,41 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args)
+    {
+        Scanner s=new Scanner(System.in);
+        String f=s.nextLine();
+        String h=s.nextLine();
+       Set<Integer> st=new HashSet<Integer>();
+        String[] a=f.split(" ");
+        String[] b=h.split(" ");
+        for(int i=0;i<a.length;i++)
+        {
+            Integer d=Integer.parseInt(a[i]);
+            st.add(d);
+        }
+        for(int i=0;i<b.length;i++)
+        {
+            Integer dh=Integer.parseInt(b[i]);
+            st.add(dh);
+        }
+        if(st.size()==a.length)
+        {
+            System.out.print("YES");
+        }
+        else{
+            System.out.print("NO");
+        }
+    }
+}
+
+
+
+
+
+Input : 2 3 5 7
+        3 5
+Output:YES
+
+Input: 20 40 60 80
+       20 30 40 60
+Output:NO
